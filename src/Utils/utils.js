@@ -9,10 +9,10 @@ export const getMovieDetailsById= async(movieID)=>{
 
 }
 
-// export const getMoviesBySearchTerm= async()=>{
-//     const res= await fetch(
-//         `${omdbURL}apikey=${process.env.REACT_APP_OMDB_API}&s=${searchTerm}`
-//     );
-//     const movies=await res.json();
-//     return movies;
-// }
+export const getMoviesBySearchTerm= async(searchTerm)=>{
+    const res= await fetch(
+        `${omdbURL}apikey=${process.env.REACT_APP_OMDB_API}&s=${searchTerm}`
+    );
+    const movies=await res.json();
+    return movies;
+}
